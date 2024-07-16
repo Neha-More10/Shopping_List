@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping List</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            background: url('shopping image 2.jpg') no-repeat center center fixed; 
+            background-size: cover;
+            position: relative;
+            z-index: 1;
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* background: rgba(255, 255, 255, 0.8); Lighten the background */
+            z-index: -1;
+        }
+        .content {
+            z-index: 2;
+        }
+        .input-container {
+            background-color: rgba(234, 237, 165, 0.9);
+            padding: 10px;
+            border-radius: 5px;
+            margin: 20px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .input-container h3 {
+            margin: 0;
+            padding-bottom: 10px;
+        }
+        .input-container input,
+        .input-container button {
+            margin: 5px;
+            padding: 10px;
+            font-size: 16px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            max-width: 600px;
+        }
+        ul li {
+            background: rgba(211, 228, 131, 0.9);
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .done {
+            text-decoration: line-through;
+        }
+        @media (max-width: 600px) {
+            .input-container input,
+            .input-container button {
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="content">
+        <h1>Shopping List</h1>
+        <b>No excuses today</b> <br>
+        Get it done!! <br>
+        <div class="input-container">
+            <h3>Add new items:</h3>
+            <input id="UserInput" type="text" placeholder="Enter items">
+            <button id="Enter">Enter</button>
+        </div>
+        <ul id="ul1">
+            <li>Tomatoes <button class="delete">Delete</button></li>
+            <li>Potatoes <button class="delete">Delete</button></li>
+            <li>Veggies <button class="delete">Delete</button></li>
+            <li>Mangoes <button class="delete">Delete</button></li>
+            <li>Cleaning <button class="delete">Delete</button></li>
+        </ul>
+    </div>
+    <script type="text/javascript" src="shopping.js"></script>
+</body>
+</html>
